@@ -1,0 +1,17 @@
+{
+  "name": "SqlServer",
+  "version": "0.1.0",
+  "author": "slane",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "journey": "0.4.0-pre-3",
+    "mysql2": "^1.1.0"
+  },
+  "devDependencies": {},
+  "repository": {}
+}
