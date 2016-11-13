@@ -3,7 +3,7 @@
  */
 const db = require('./utils/connect')
 
-var data = {
+let data = {
     code:'1',
     data:{},
     msg:''

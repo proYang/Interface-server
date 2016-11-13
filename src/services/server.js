@@ -2,14 +2,15 @@
  * Created by Slane on 2016/11/13.
  */
 const   http        = require('http'),
-        url         = require('url');
+        url         = require('url'),
+        port        = require('../config/config').port;
 
     function start (router) {
         function onRequest(req, res) {
-            var pathname = url.parse(req.url).pathname;
+            let pathname = url.parse(req.url).pathname;
             console.log("Requset For " + pathname + "Recevied");
 
-            var body = "";
+            let body = "";
 
             req.addListener('data', function (chunk) { body += chunk });
             req.addListener('end', function () {
@@ -24,7 +25,7 @@ const   http        = require('http'),
 
 
 
-        http.createServer(onRequest).listen(8888);
-        console.log("Server has started.Port:8888");
+        http.createServer(onRequest).listen(port);
+        console.log("Server has started.Port:" + port);
     }
 module.exports.start = start;
